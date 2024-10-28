@@ -1,0 +1,111 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 343px;
+    height: 512px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.counter-display {
+    font-size: 56px;
+    font-weight: bold;
+    color: #00ff88;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    margin: 8px 0;
+    transition: transform 0.1s ease;
+    line-height: 1;
+}
+
+#clickButton {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #00ff88;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+#clickButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+}
+
+#clickButton:active {
+    transform: translateY(0);
+}
+
+.recent-clickers {
+    margin-top: 16px;
+}
+
+.clickers-list {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.clicker-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #333;
+    border-radius: 8px;
+    height: 20px;
+}
+
+.clicker-item.placeholder {
+    background: linear-gradient(90deg, #333 0%, #2a2a2a 50%, #333 100%);
+    animation: shimmer 2s infinite linear;
+    background-size: 400px 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+.username {
+    color: #00ff88;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.timestamp {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+}
