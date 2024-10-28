@@ -11,6 +11,7 @@ Devvit.addMenuItem({
   location: 'subreddit',
   forUserType: 'moderator',
   onPress: async (_event, context) => {
+    console.log('test log in menu item')
     const { reddit, ui } = context;
     const subreddit = await reddit.getCurrentSubreddit();
     await reddit.submitPost({
@@ -33,7 +34,7 @@ Devvit.addCustomPostType({
   height: 'tall',
   render: (context) => {
     const [counterState, setCounterState] = useState({ count: 0 });
-    console.log('log test 1')
+    console.log('test log in add render function')
     const handleMessage = (ev: JSONObject) => {
         if (ev.type === 'counterUpdate') {
             setCounterState({ count: ev.data.count });
